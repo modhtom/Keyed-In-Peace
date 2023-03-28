@@ -1,8 +1,6 @@
-// Add a click event listener to each section title
 const sectionTitles = document.querySelectorAll("section h2");
 sectionTitles.forEach(title => {
 	title.addEventListener("click", () => {
-		// Toggle the class "expanded" on the parent section element
 		title.parentNode.classList.toggle("expanded");
 	});
 });

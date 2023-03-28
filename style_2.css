@@ -12,6 +12,7 @@ header {
 }
 
 h1 {
+  font-family: Arial, sans-serif;
     mix-blend-mode:hard-light;
     text-align: center;
     color: #ffffff;
