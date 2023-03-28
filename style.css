@@ -1,125 +1,115 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    overflow-x: hidden;
-    left: 0;
-    background-color: #435b5b;
-    opacity: 1;
-    background-image:  radial-gradient(#b7d5d7 1.3px, transparent 1.3px), radial-gradient(#b7d5d7 1.3px, #435b5b 1.3px);
-    background-size: 52px 52px;
-    background-position: 0 0,26px 26px;
-  
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  h1 {
-    mix-blend-mode:hard-light;
-    text-align: center;
-    margin-bottom: 5px;
-    color: rgb(255, 255, 255);
-  }
-  h2{
-    color: rgb(0, 255, 128);
-    margin-left: 7px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #435b5b;
+  background-image: radial-gradient(#b7d5d7 1.3px, transparent 1.3px), radial-gradient(#b7d5d7 1.3px, #435b5b 1.3px);
+  background-size: 52px 52px;
+  background-position: 0 0, 26px 26px;
+  overflow-x: hidden;
+}
 
-  h3{
-    mix-blend-mode:hard-light;
-    text-align: center;
-    margin-bottom: 30px;
-    color: rgb(255, 255, 255, 0.692);
-    font-size:x-small
-  }
-  p{
-    color: rgb(0, 0, 0);
-    margin-left: 12px;
-    text-size-adjust: 10px;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  #player {
-    margin-left: 60px;
-  }
+h1 {
+  mix-blend-mode: hard-light;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+}
 
-  input{
-    -webkit-appearance: none;
-    background-color: white;
-    border-radius: 25px;
-    width: 200px;
-    height: 10px;
-  }
+h2 {
+  color: rgb(0, 255, 128);
+  margin-left: 7px;
+}
 
-  input::-webkit-slider-thumb{
-    -webkit-appearance :none;
-    background: #92f8ff;
-    width: 15px;
-    height: 15px;
-    border:2px solid #bd8bff;
-    border-radius: 50%;
-    cursor: pointer;
-  }  
+p {
+  color: rgb(0, 0, 0);
+  margin-left: 12px;
+  text-size-adjust: 10px;
+}
 
-  .keyboard-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-  
-  .keyboard {
-    width: 350px;
-    height: 370px;
-    margin-bottom: 20px;
-    background-color: #ffffff21;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .keyboard:hover {
-    transform: translateY(-5px);
-  }
-  
-  .keyboard img {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  
-  .keyboard-info {
-    padding: 20px;
-  }
-  
-  .keyboard-info h2 {
-    margin-top: 0;
-  }
-  
-  .keyboard-info p {
-    margin-bottom: 20px;
-  }
+#player {
+  margin-left: 60px;
+}
 
-  .selection-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-  
-  .selection {
-    width: calc(50% - 10px);
-    background-color: #ffffff21;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    padding: 20px;
-  }
+input {
+  -webkit-appearance: none;
+  background-color: white;
+  border-radius: 25px;
+  width: 200px;
+  height: 10px;
+}
+
+input::-webkit-slider-thumb{
+  -webkit-appearance :none;
+  background: #92f8ff;
+  width: 15px;
+  height: 15px;
+  border:2px solid #bd8bff;
+  border-radius: 50%;
+  cursor: pointer;
+}  
+
+.keyboard-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.Card {
+  width: 350px;
+  height: 370px;
+  margin-bottom: 20px;
+  background-color: #ffffff21;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+}
+
+.Card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Card-info {
+  padding: 20px;
+}
+
+.Card-info h2 {
+  margin-top: 0;
+}
+
+.Card-info p {
+  margin-bottom: 20px;
+}
+
+.selection-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.selection {
+  width: calc(50% - 10px);
+  background-color: #ffffff21;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
   
   .selection h2 {
     margin-top: 0;
@@ -218,3 +208,14 @@ body {
 ::-webkit-scrollbar-track:hover {
   background-color: #ddd; 
 }
+
+
+
+
+
+
+
+
+
+
+
