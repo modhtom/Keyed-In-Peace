@@ -20,3 +20,17 @@ function scrollFunction() {
     document.querySelector(".float-button").style.display = "none";
   }
 }
+
+function filterCards() {
+  const category = document.getElementById('category-select').value;
+  const cards = document.querySelectorAll('.column');
+  cards.forEach(card => {
+    if (category === 'all') {
+      card.style.display = 'block';
+    } else if (card.getAttribute('data-category') === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
