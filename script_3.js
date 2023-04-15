@@ -1,5 +1,6 @@
 const apiKey = '012e183596f84952a0f182543231504';
 const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}`;
+let tempInF = false;
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(position => {
@@ -20,20 +21,22 @@ if (navigator.geolocation) {
         document.querySelector('.city').textContent = city;
         document.querySelector('.country').textContent = country;
         document.querySelector('.icon').setAttribute('src', iconUrl);
-        document.querySelector('.temp').textContent = tempF;
-        document.querySelector('.unit').textContent = '°F';
-        document.querySelector('.temperature').addEventListener('click', () => {
-          const unit = document.querySelector('.unit').textContent;
-          if (unit === '°F') {
+        document.querySelector('.temp').textContent = tempC;
+        document.querySelector('.unit').textContent = '°c';
+        document.querySelector('.condition').textContent = condition;
+        document.querySelector('.humidity').textContent = humidity;
+
+        setInterval(() => {
+          if (tempInF) {
             document.querySelector('.temp').textContent = tempC;
             document.querySelector('.unit').textContent = '°C';
+            tempInF = false;
           } else {
             document.querySelector('.temp').textContent = tempF;
             document.querySelector('.unit').textContent = '°F';
+            tempInF = true;
           }
-        });
-        document.querySelector('.condition').textContent = condition;
-        document.querySelector('.humidity').textContent = humidity;
+        }, 30000);
       });
   });
 }
