@@ -61,7 +61,7 @@ h2 {
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
   padding: 20px;
-  width: 250px;
+  width: 500px;
   position: center;
   margin-bottom: 20px;
   background-color: #ffffff21;
@@ -78,7 +78,7 @@ h2 {
 .weather-widget {
     font-family: Arial, sans-serif;
     padding: 20px;
-    width: 250px;
+    width: 500px;
     position: center;
     margin-bottom: 20px;
     background-color: #ffffff21;
@@ -86,6 +86,8 @@ h2 {
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    background-image: url('clouds.png');
+    animation: move-clouds 20s linear infinite;
   }
   
   .location {
@@ -157,4 +159,13 @@ h2 {
 
 ::-webkit-scrollbar-track:hover {
   background-color: #ddd; 
+}
+
+@keyframes move-clouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
 }
