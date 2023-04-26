@@ -1,5 +1,5 @@
 Welcome to My Awesome Website! 
-This website showcases my skills in web development, and includes a cool features "background animation".
+This website showcases my skills in web development, and includes a cool animations.
 https://modhtom.github.io/Keyed-In-Peace/
 
 Technologies Used:-
