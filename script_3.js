@@ -40,3 +40,36 @@ if (navigator.geolocation) {
       });
   });
 }
+
+function updateTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds(); // Fixed typo here
+  const day = now.toLocaleDateString('en-US', { weekday: 'long' });
+  const date = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const clockElement = document.getElementById('clock');
+  clockElement.innerHTML = `${hours}:${minutes}:${seconds}`;
+  const dateElement = document.getElementById('date');
+  dateElement.innerHTML = `${day}, ${date}`;
+}
+setInterval(updateTime, 1000);
+
+window.addEventListener('load', () => {
+  new Timer(document.querySelector('.timer'));
+});
+
+function showVideos() {
+  var videos = document.querySelectorAll('.column video');
+  var checkbox = document.getElementById('show-videos');
+
+  if (checkbox.checked) {
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].style.display = 'block';
+    }
+  } else {
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].style.display = 'none';
+    }
+  }
+}

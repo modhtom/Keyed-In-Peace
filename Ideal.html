@@ -5,8 +5,8 @@
     <title>KIP</title>    
     <link rel="icon" type="image-png" href="keyboard-icon.png"/>
     <link rel="stylesheet" type="text/css" href="style_3.css">
-    <script src="script_3.js"></script>
-  </head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script_3.js" ></script>
   <body>
 
     <h1>Dreamscape</h1>
@@ -17,51 +17,83 @@
       <a href="Credits.html">❤️</a>
     </div>
 
-    <div class="weather-widget">
-        <div class="location">
-          <span class="city">City</span>
-          <span class="country">Country</span>
-        </div>
-        <div class="icon-container">
-          <img class="icon" src="" alt="Weather icon">
-        </div>
-        <div class="temperature">
-          <span class="temp">--</span>
-          <span class="unit">°F</span>
-        </div>
-        <div class="description">
-          <span class="condition">🪧</span>
-          <span class="humidity">Please allow location access.</span>
-        </div>
-      </div>   
+    <div class="container">
 
-      <div class = "column">
-        <video width="500" height="auto" controls autoplay loop class="vid">
-          <source src="animation_1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div class="top-row">
+
+        <div class="time">
+          <div id="clock"></div>
+          <div id="date"></div>
+          <div class="timer">			
+            <span class="timer__part timer__part--minutes">00</span>
+            <span class="timer__part">:</span>
+            <span class="timer__part timer__part--seconds">00</span>
+            <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+              <span class="material-icons">play_arrow</span>
+            </button>
+            <button type="button" class="timer__btn timer__btn--reset">
+              <span class="material-icons">timer</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="weather-widget">
+          <div class="location">
+            <span class="city">City</span>
+            <span class="country">Country</span>
+          </div>
+          <div class="icon-container">
+            <img class="icon" src="" alt="Weather icon">
+          </div>
+          <div class="temperature">
+            <span class="temp">--</span>
+            <span class="unit">°F</span>
+          </div>
+          <div class="description">
+            <span class="condition">🪧</span>
+            <span class="humidity">Please allow location access.</span>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class = "column">
-        <video width="500" height="auto" controls autoplay loop class="vid">
-          <source src="animation_2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <input type="checkbox" id="show-videos" onchange="showVideos()" />
+      <label for="show-videos">Show Animation Videos</label>
       
-        <div class = "column">
-        <video width="500" height="auto" controls autoplay loop class="vid">
-          <source src="animation_3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <div class="bottom-row">
+        
+        <div class="column">
+          <video width="500" height="auto" controls loop class="vid-1" muted>
+            <source src="animation_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="column">
+          <video width="500" height="auto" controls loop class="vid-2" muted>
+            <source src="animation_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="column">
+          <video width="500" height="auto" controls loop class="vid-3" muted>
+            <source src="animation_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="column">
+          <video width="500" height="auto" controls loop class="vid-4" muted>
+            <source src="animation_4.mp4" type="video/mp4" start="1">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-        <div class = "column">
-        <video width="500" height="auto" controls autoplay loop class="vid" muted>
-          <source src="animation_4.mp4" type="video/mp4" start="1">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    </div>
+
+  </div>
 
   </body>
 </html>
