@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #435b5b;
+  background-image: radial-gradient(#b7d5d7 1.3px, transparent 1.3px), radial-gradient(#b7d5d7 1.3px, #435b5b 1.3px);
+  background-size: 52px 52px;
+  background-position: 0 0, 26px 26px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  mix-blend-mode: hard-light;
+  text-align: center;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  color: rgb(0, 255, 128);
+  margin-left: 7px;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  text-align: left;
+  font-size: 16px;
+  margin: 4px 2px;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+
+ a{
+  color: #5a81ff;
+  text-decoration: none;
+ }
+
+p {
+  color: rgb(0, 0, 0);
+  margin-left: 12px;
+  text-size-adjust: 10px;
+}
+
+#player {
+  margin-left: 60px;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  border-radius: 25px;
+  width: 200px;
+  height: 10px;
+}
+
+input::-webkit-slider-thumb{
+  -webkit-appearance :none;
+  background: #92f8ff;
+  width: 15px;
+  height: 15px;
+  border:2px solid #bd8bff;
+  border-radius: 50%;
+  cursor: pointer;
+}  
+
+.keyboard-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.Card {
+  width: 350px;
+  height: 370px;
+  margin-bottom: 20px;
+  background-color: #ffffff21;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+}
+
+.Card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Card-info {
+  padding: 20px;
+}
+
+.Card-info h2 {
+  margin-top: 0;
+}
+
+.Card-info p {
+  margin-bottom: 20px;
+}
+
+.selection-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.selection {
+  width: calc(50% - 10px);
+  background-color: #ffffff21;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+  
+  .selection h2 {
+    margin-top: 0;
+  }
+  
+  .selection label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .selection select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .volume-section {
+    margin-top: 40px;
+  }
+  
+  .volume-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .volume-label {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .volume-slider {
+    width: 100%;
+  }
+  
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+.column {
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+
+.float-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff21;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  z-index: 9999;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.float-button a {
+  color: #d19191;
+  text-decoration: none;
+}
+
+.float-button:hover {
+  transform: translateY(-5px);
+}
+
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6070ff; 
+  border-radius: 20px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #435b5b;
+  border-radius: 15px; 
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #ddd; 
+}
+
+.DropDown {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.DropDown label {
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #a3acf7;
+}
+
+.DropDown select {
+  display: inline-block;
+  padding: 3px 4px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f58c;
+  color: #000000;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.DropDown select:focus {
+  outline: none;
+  box-shadow: 0 0 9px #7c5dfa;
+}

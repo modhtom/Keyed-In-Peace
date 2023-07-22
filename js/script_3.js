@@ -42,7 +42,7 @@ function updateTime() {
   const now = new Date();
   const hours = now.getHours();
   const minutes = now.getMinutes();
-  const seconds = now.getSeconds(); // Fixed typo here
+  const seconds = now.getSeconds(); 
   const day = now.toLocaleDateString('en-US', { weekday: 'long' });
   const date = now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   const clockElement = document.getElementById('clock');
@@ -75,14 +75,12 @@ async function getNews(){
         console.log(response.results);
         for(var i = 0; i < response.results.length; i++){
             const output = document.getElementById('output');
-          if (response.results[i].section === "Food") {
-              const output = document.getElementById('output');
             try{             
                 output.innerHTML += `
                     <div class="card">
                     <div class="card-body">
                     <a href="${response.results[i].url}" target="_blank" class="card-link">
-                    <img src="${response.results[i]['media'][0]['media-metadata'][2].url}" class="card-img-top" alt="${response.results[i]['media'][0].caption}" title="${response.results[i]['media'][0].caption}">
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmV3c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=350&q=60" class="card-img-top" alt="${response.results[i]['media'][0].caption}" title="${response.results[i]['media'][0].caption}">
                     </a><br>
                     <h2 class="card-title">${response.results[i].title}</h2>
                     <div class="card-text">
@@ -99,10 +97,7 @@ async function getNews(){
             }
             console.log(response.results[i].title);
             console.log(i);
-          }
-          else{
-           no_news=1;
-         }
+
         }
         if(no_news=1){
           try{
@@ -142,83 +137,3 @@ async function getNews(){
     }
     getQuote();
   });
-
-  class Timer {
-    constructor(root) {
-      root.innerHTML = Timer.getHTML();
-      this.el = {
-        minutes: root.querySelector(".timer__part--minutes"),
-        seconds: root.querySelector(".timer__part--seconds"),
-        control: root.querySelector(".timer__btn--control"),
-        reset: root.querySelector(".timer__btn--reset")
-      };
-      this.interval = null;
-      this.remainingSeconds = 0;
-      this.el.control.addEventListener("click", () => {
-        if (this.interval === null) {
-          this.start();
-        } else {
-          this.stop();
-        }
-      });
-      this.el.reset.addEventListener("click", () => {
-        const inputMinutes = prompt("Enter number of minutes:");
-        if (inputMinutes < 60) {
-          this.stop();
-          this.remainingSeconds = inputMinutes * 60;
-          this.updateInterfaceTime();
-        }
-      });
-    }
-    updateInterfaceTime() {
-      const minutes = Math.floor(this.remainingSeconds / 60);
-      const seconds = this.remainingSeconds % 60;
-      this.el.minutes.textContent = minutes.toString().padStart(2, "0");
-      this.el.seconds.textContent = seconds.toString().padStart(2, "0");
-    }
-    updateInterfaceControls() {
-      if (this.interval === null) {
-        this.el.control.innerHTML = `<span class="material-icons">play_arrow</span>`;
-        this.el.control.classList.add("timer__btn--start");
-        this.el.control.classList.remove("timer__btn--stop");
-      } else {
-        this.el.control.innerHTML = `<span class="material-icons">pause</span>`;
-        this.el.control.classList.add("timer__btn--stop");
-        this.el.control.classList.remove("timer__btn--start");
-      }
-    }
-    start() {
-      if (this.remainingSeconds === 0) return;
-      this.interval = setInterval(() => {
-        this.remainingSeconds--;
-        this.updateInterfaceTime();
-        if (this.remainingSeconds === 0) {
-          this.stop();
-        }
-      }, 1000);
-      this.updateInterfaceControls();
-    }
-    stop() {
-      clearInterval(this.interval);
-      this.interval = null;
-      this.updateInterfaceControls();
-    }
-    static getHTML() {
-      return `
-        <span class="timer__part timer__part--minutes">00</span>
-        <span class="timer__part">:</span>
-        <span class="timer__part timer__part--seconds">00</span>
-        <button type="button" class="timer__btn timer__btn--control timer__btn--start">
-          <span class="material-icons">play_arrow</span>
-        </button>
-        <button type="button" class="timer__btn timer__btn--reset">
-          <span class="material-icons">timer</span>
-        </button>
-      `;
-    }
-  }
-  document.addEventListener("DOMContentLoaded", function() {
-  new Timer(
-    document.querySelector(".timer")
-  );
-});
