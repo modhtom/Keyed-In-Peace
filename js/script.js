@@ -162,7 +162,7 @@ const cardData = [
     category: "other",
     imgSrc: "https://images.theconversation.com/files/272916/original/file-20190506-103075-yq4lnf.jpg",
     title: "Rain",
-    description: "Raindrops",
+    switches: "Raindrops",
     emoji: "⛈️🌧️🌧️",
     audioSrc: "/Keyed-In-Peace/audio/audio_Rain.mp3"
   },
@@ -170,47 +170,44 @@ const cardData = [
     category: "other",
     imgSrc: "https://i.ytimg.com/vi/qsOUv9EzKsg/maxresdefault.jpg",
     title: "Fire",
-    description: "Campfire crackling",
-    emoji: "🔥🔥🔥",
+    switches: "Campfire crackling",
+    case: "🔥🔥🔥",
     audioSrc: "/Keyed-In-Peace/audio/audio_Fire.mp3"
   },
   {
     category: "other",
     imgSrc: "https://www.lego.com/cdn/cs/set/assets/blt07d89d3bb6115752/21336.png",
     title: "Office",
-    description: "Fun Office",
-    emoji: "🏢🏢🏢",
+    switches: "Fun Office",
+    case: "🏢🏢🏢",
     audioSrc: "/Keyed-In-Peace/audio/audio_Office.mp3"
   },
   {
     category: "other",
     imgSrc: "https://images.unsplash.com/photo-1507812984078-917a274065be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "AirPlane",
-    description: "Airplane White Noise",
-    emoji: "✈️✈️✈️",
+    switches: "Airplane White Noise",
+    case: "✈️✈️✈️",
     audioSrc: "/Keyed-In-Peace/audio/audio_Airplane.mp3"
   },
   {
     category: "other",
     imgSrc: "https://plus.unsplash.com/premium_photo-1682145344450-34d8323dec84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWlyJTIwY29uZGl0aW9uZXJ8ZW58MHx8MHx8fDA%3D",
     title: "Air Conditioner",
-    description: "Sweet Sound of Wind",
-    emoji: "🍃🍃🍃",
+    switches: "Sweet Sound of Wind",
+    case: "🍃🍃🍃",
     audioSrc: "/Keyed-In-Peace/audio/audio_Air_conditioner.mp3"
   },
   {
     category: "other",
     imgSrc: "https://images.unsplash.com/photo-1547083723-7c73eaf54cc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG9jZWFufGVufDB8fDB8fHww",
     title: "Ocean",
-    description: "Sweet Sound of Waves",
-    emoji: "🌊🌊🌊",
+    switches: "Sweet Sound of Waves",
+    case: "🌊🌊🌊",
     audioSrc: "/Keyed-In-Peace/audio/audio_Ocean.mp3"
   }
 ];
-
-
 const cardsContainer = document.getElementById("cards-container");
-
 cardData.forEach((data, index) => {
   const card = document.createElement("div");
   card.className = "column";
