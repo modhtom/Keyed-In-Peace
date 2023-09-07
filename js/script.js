@@ -225,7 +225,6 @@ cardData.forEach((data, index) => {
       </div>
     </div>
   `;
-
   cardsContainer.appendChild(card);
 });
 });
