@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-image: radial-gradient(#87abad 1.3px, transparent 1.3px), radial-gradient(#b039ff 1.3px, rgb(13,17,23) 1.3px);
+  background-image: radial-gradient(#87abad 1.3px, transparent 1.3px),
+    radial-gradient(#b039ff 1.3px, rgb(13, 17, 23) 1.3px);
   background-size: 52px 52px;
   background-position: 0 0, 26px 26px;
   overflow-x: hidden;
@@ -11,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto; 
+  height: auto;
 }
 
 .top-row {
@@ -42,9 +43,9 @@ h2 {
   margin: 4px 2px;
   text-align: center;
   margin-bottom: 20px;
- }
+}
 
-h3{
+h3 {
   color: rgb(15, 0, 58);
   padding: 8px 16px;
   font-size: 36px;
@@ -53,17 +54,18 @@ h3{
   margin-bottom: 20px;
 }
 
- a{
+a {
   color: #5a81ff;
   text-decoration: none;
- }
+}
 
 .float-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #ffffff21;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -116,7 +118,7 @@ h3{
   text-align: center;
 }
 
-#quote{
+#quote {
   font-size: 20px;
   margin-top: -10px;
   color: #d6d8f7;
@@ -140,7 +142,7 @@ h3{
   cursor: pointer;
 }
 
-.News{
+.News {
   margin: 0 1rem;
   float: left;
   margin-right: 50px;
@@ -159,7 +161,7 @@ h3{
   overflow: auto;
 }
 
-img{
+img {
   border-radius: 25px;
 }
 
@@ -169,113 +171,113 @@ a.card-link {
   cursor: pointer;
 }
 
-p{
+p {
   margin-top: -25px;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-size: medium;
   text-align: center;
 }
 
-h4{
-  color:rgb(255, 255, 255);
+h4 {
+  color: rgb(255, 255, 255);
   font-size: 75%;
   margin-top: 5px;
   margin-bottom: -25px;
 }
 
-.vid-1{
+.vid-1 {
   border-radius: 15px;
   display: none;
 }
 
-.vid-2{
+.vid-2 {
   border-radius: 15px;
   display: none;
 }
 
-.vid-3{
+.vid-3 {
   border-radius: 15px;
   display: none;
 }
 
-.vid-4{
+.vid-4 {
   border-radius: 15px;
   display: none;
 }
 
 .weather-widget {
-    float: left;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    width: 200px;
-    height: fit-content;
-    position: center;
-    margin-bottom: 20px;
-    background-color: #ffffff21;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .location {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .city {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .country {
-    font-size: 16px;
-  }
-  
-  .icon-container {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .temperature {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .temp {
-    font-size: 60px;
-  }
-  
-  .unit {
-    font-size: 24px;
-    margin-left: 5px;
-  }
-  
-  .description {
-    text-align: center;
-  }
-  
-  .condition {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .humidity {
-    font-size: 16px;
-    margin-left: 5px;
-  }
-  
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 200px;
+  height: fit-content;
+  position: center;
+  margin-bottom: 20px;
+  background-color: #ffffff21;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.location {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.city {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.country {
+  font-size: 16px;
+}
+
+.icon-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 60px;
+}
+
+.unit {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.description {
+  text-align: center;
+}
+
+.condition {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.humidity {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
 ::-webkit-scrollbar {
-  width: 5px; 
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #6070ff; 
-  border-radius: 20px; 
+  background-color: #6070ff;
+  border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -284,15 +286,15 @@ h4{
 
 ::-webkit-scrollbar-track {
   background-color: #435b5b;
-  border-radius: 15px; 
+  border-radius: 15px;
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #ddd; 
+  background-color: #ddd;
 }
 
 input[type="checkbox"] {
-  display: none; 
+  display: none;
 }
 
 input[type="checkbox"] + label {
@@ -320,7 +322,7 @@ input[type="checkbox"] + label:before {
 }
 
 input[type="checkbox"]:checked + label:before {
-  content: "\2714"; 
+  content: "\2714";
   font-size: 16px;
   color: #fff;
   background-color: #000000;

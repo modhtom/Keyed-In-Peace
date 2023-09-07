@@ -196,7 +196,7 @@ const cardData = [
     title: "Air Conditioner",
     switches: "Sweet Sound of Wind",
     case: "🍃🍃🍃",
-    audioSrc: "/Keyed-In-Peace/audio/audio_Air_conditioner.mp3"
+    audioSrc: src="https://pixabay.com/sound-effects/wall-air-conditioner-43901/"
   },
   {
     category: "other",

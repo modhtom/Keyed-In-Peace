@@ -1,11 +1,13 @@
 const sectionTitles = document.querySelectorAll("section h2");
-sectionTitles.forEach(title => {
-	title.addEventListener("click", () => {
-		title.parentNode.classList.toggle("expanded");
-	});
+sectionTitles.forEach((title) => {
+  title.addEventListener("click", () => {
+    title.parentNode.classList.toggle("expanded");
+  });
 });
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
@@ -17,7 +19,7 @@ function scrollFunction() {
 
 const addButton = document.querySelector(".float-button a");
 
-addButton.addEventListener("click", function() {
+addButton.addEventListener("click", function () {
   const newButton = document.createElement("button");
   newButton.classList.add("new-button");
   newButton.innerText = "❤️";
