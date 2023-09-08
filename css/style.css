@@ -254,3 +254,17 @@ input::-webkit-slider-thumb{
   outline: none;
   box-shadow: 0 0 9px #7c5dfa;
 }
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  .volume-control {
+    display: flex;
+    align-items: center;
+  }
+
+  .volume-control input {
+    margin-left: 5px;
+  }
