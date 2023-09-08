@@ -214,16 +214,21 @@ cardData.forEach((data, index) => {
   card.setAttribute("data-category", data.category);
 
   card.innerHTML = `
-    <div class="Card">
-      <img src="${data.imgSrc}" alt="Keyboard ${index + 1}" loading="lazy">
-      <h2>${data.title}</h2>
-      <p>Switches: ${data.switches}</p>
-      <p>Stabilizers: ${data.stabilizers}</p>
-      <audio id="keyboard${index + 1}-sound" src="${data.audioSrc}" loop data-type="keyboard"></audio>
-      <div id="player">
-        <input type="range" min="0" max="1" value="0" step="0.01" oninput="setVolume('keyboard${index + 1}-sound', this.value)" onclick="playSound('keyboard${index + 1}-sound',value)">
+<div class="Card">
+  <img src="${data.imgSrc}" alt="Keyboard ${index + 1}" loading="lazy">
+  <h2>${data.title}</h2>
+  <p>Switches: ${data.switches}</p>
+  <p>Stabilizers: ${data.stabilizers}</p>
+  <div class="audio-controls">
+    <audio id="keyboard${index + 1}-sound" src="${data.audioSrc}" loop data-type="keyboard"></audio>
+    <div id="player">
+      <div class="volume-control">
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <input type="range" min="0" max="1" value="0" step="0.01" oninput="setVolume('keyboard${index + 1}-sound', this.value)" onclick="playSound('keyboard${index + 1}-sound', value)">
       </div>
     </div>
+  </div>
+</div>
   `;
   cardsContainer.appendChild(card);
 });
