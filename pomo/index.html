@@ -66,7 +66,6 @@
           />
         </svg>
         <div id="time"></div>
-
         <div id="status">
           <span id="s-focus">FOCUS</span>
           <span id="s-short">SHORT BREAK</span>
@@ -101,9 +100,9 @@
           min="0"
           max="100"
           step="1"
-          value="5"
+          value="0"
         />
-        <span id="volume-value">5</span>
+        <span id="volume-value">0</span>
       </div>
       <button id="resetround" title="Reset Current Timer">
         <svg
@@ -193,6 +192,20 @@
             </div>
           </div>
         </section>
+
+        <section class="section">
+          <div id="todoapp">
+            <h2>To-Do List</h2>
+            <ul id="lists"></ul>
+            <input
+              type="text"
+              id="new-list-input"
+              placeholder="New thing to do"
+            />
+            <button id="add-list-btn">Add List</button>
+          </div>
+        </section>
+
         <section class="section">
           <h2>Appearance</h2>
           <div class="setting">
@@ -567,6 +580,50 @@
       </div>
     </div>
 
+    <div id="firstload">
+      <div id="firstloadcontent">
+        <h2>Welcome to Tomodoro!</h2>
+        Tomodoro is an open source pomodoro web app with cool features like PIP
+        Mode, white noise, tasks, statistics and offline support. </br>made by <a
+        href="https://github.com/lazy-guy" target="_blank">lazy-guy.</a>
+        <br /><br /><br />
+        <h2>What's New</h2>
+        <ul id="new-list">
+          <li>
+            <h3>Tasks & Statistics</h3>
+            <div class="whats-new-desc">
+              You can now create tasks and track the time spent focusing on
+              these tasks. All the data is stored in your browser.
+            </div>
+          </li>
+          <li>
+            <h3>To-do List</h3>
+            <div class="whats-new-desc">
+              You can now add To-do's, you can find it in the menu.</br>made by <a
+              href="https://github.com/modhtom" target="_blank">modhtom.</a>
+            </div>
+          </li>
+        </ul>
+        <br /><br />
+        <h2>About PIP mode</h2>
+        Tomodoro supports Always on Top mode, or Picture-In-Picture mode, right
+        in the browser, without having to install any electron app.<br />
+        PIP mode is supported on Chromium based browsers(Tested on Chrome and
+        Edge).<br />
+        Safari not tested (yet) but might work.<br />
+        On desktop Firefox, PIP button will only make the video visible but will
+        not activate PIP. To switch to PIP mode, right click on the video and
+        select "Watch in Picture-In-Picture".
+        <br /><br /><br />
+        <h2>PIP mode on Chrome for Android</h2>
+        If you are using Chrome for Android, then the PIP button will make the
+        video element visible. In order to switch to PIP mode, make the video
+        fullscreen and then go to your device's homescreen(by pressing home
+        button or using navigation gesture) without exiting fullscreen. PIP Mode
+        get be activated.
+      </div>
+      <button id="closeintro" class="hover-shadow">Let's Get Started!</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

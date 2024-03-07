@@ -1684,6 +1684,70 @@ if ("documentPictureInPicture" in window) {
 }
 //#endregion
 
+//#region To do list
+document.addEventListener("DOMContentLoaded", function () {
+  const listsContainer = document.getElementById("lists");
+  const newListInput = document.getElementById("new-list-input");
+  const addListBtn = document.getElementById("add-list-btn");
+
+  // Load saved lists from localStorage
+  const savedLists = JSON.parse(localStorage.getItem("todoLists")) || [];
+  savedLists.forEach(function (listName) {
+    addList(listName);
+  });
+
+  addListBtn.addEventListener("click", function () {
+    const newListName = newListInput.value.trim();
+    if (newListName !== "") {
+      addList(newListName);
+      newListInput.value = "";
+
+      // Save the updated list to localStorage
+      saveLists();
+    }
+  });
+
+  function addList(name) {
+    const listElement = document.createElement("li");
+    listElement.innerHTML = `
+      <span>${name}</span>
+      <button class="edit-list-btn">Edit</button>
+      <button class="delete-list-btn">Delete</button>
+    `;
+    listsContainer.appendChild(listElement);
+
+    const editBtn = listElement.querySelector(".edit-list-btn");
+    const deleteBtn = listElement.querySelector(".delete-list-btn");
+
+    editBtn.addEventListener("click", function () {
+      const newName = prompt("Enter new name for the list:", name);
+      if (newName !== null) {
+        listElement.querySelector("span").textContent = newName;
+        saveLists();
+      }
+    });
+
+    deleteBtn.addEventListener("click", function () {
+      const confirmDelete = confirm(
+        "Are you sure you want to delete this list?"
+      );
+      if (confirmDelete) {
+        listElement.remove();
+        saveLists();
+      }
+    });
+  }
+
+  function saveLists() {
+    const listNames = Array.from(listsContainer.querySelectorAll("span")).map(
+      (span) => span.textContent
+    );
+    localStorage.setItem("todoLists", JSON.stringify(listNames));
+  }
+});
+
+//#endregion
+
 let versionNo = 1;
 
 let savedNo = parseInt(localStorage.getItem("pomo-version"));
