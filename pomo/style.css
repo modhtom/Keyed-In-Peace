@@ -1195,6 +1195,8 @@ video.pipactive {
 }
 
 #slider-container {
+  display: none;
+  visibility: hidden;
   text-align: center;
   margin-top: 20px;
 }
