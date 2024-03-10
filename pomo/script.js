@@ -72,7 +72,11 @@ let roundInfo = {
 
 function setTime() {
   let seconds = config[roundInfo.current] - roundInfo.t;
-  if (seconds < 0) {
+  if (seconds <= 0) {
+    let finished = fullname[roundInfo.current];
+    let body = "Begin ";
+    console.log(`${finished} Complete`, body);
+    notify();
     nextRound();
     return;
   }
@@ -141,7 +145,7 @@ function nextRound() {
       maxDuration: config[roundInfo.current],
     });
   }
-  notify(`${finished} Complete`, body);
+  notify();
 }
 
 function pauseplay() {
@@ -202,25 +206,6 @@ document.addEventListener("keydown", (event) => {
 
 //#region Notifications
 
-let notificationEnabled = true;
-let notificationSilent = false;
-let notification;
-let notifSelect = document.getElementById("notif-select");
-
-function setNotif(pomoNotif) {
-  if (pomoNotif === "disabled") {
-    notificationEnabled = false;
-  } else if (pomoNotif === "silent") {
-    notificationEnabled = true;
-    notificationSilent = true;
-  } else {
-    notificationEnabled = true;
-    notificationSilent = false;
-  }
-
-  notifSelect.value = pomoNotif;
-}
-
 if (localStorage.getItem("pomo-notif")) {
   setNotif(localStorage.getItem("pomo-notif"));
 }
@@ -230,40 +215,13 @@ notifSelect.addEventListener("change", function () {
   localStorage.setItem("pomo-notif", this.value);
 });
 
-function notify(title, message) {
-  if (!notificationEnabled) return;
-  if (!("Notification" in window)) {
-    return;
-  } else if (Notification.permission === "granted") {
-    if (notification) notification.close();
-    notification = new Notification(title, {
-      body: message,
-      icon: "../img/keyboard-icon.png",
-      silent: notificationSilent,
-    });
-  } else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      if (permission === "granted") {
-        notification = new Notification(title, {
-          body: message,
-          icon: "../img/keyboard-icon.png",
-          silent: notificationSilent,
-        });
-      }
-    });
-  }
+var notificationSound = new Audio("../audio/bell.wav");
+
+function notify() {
+  notificationSound.play();
 }
 
 function setup() {
-  if ("Notification" in window) {
-    if (
-      Notification.permission !== "denied" &&
-      Notification.permission !== "granted"
-    ) {
-      Notification.requestPermission();
-    }
-  }
-
   setTime();
   roundnoDiv.innerText = roundInfo.focusNum + "/" + config.longGap;
 }
