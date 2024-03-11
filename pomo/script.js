@@ -210,11 +210,6 @@ if (localStorage.getItem("pomo-notif")) {
   setNotif(localStorage.getItem("pomo-notif"));
 }
 
-notifSelect.addEventListener("change", function () {
-  setNotif(this.value);
-  localStorage.setItem("pomo-notif", this.value);
-});
-
 var notificationSound = new Audio("../audio/bell.wav");
 
 function notify() {
