@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Womier WK61",
       switches: "KTT Kang Whites.",
       stabilizers: "Krytox 205g0, holee modded",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_1.mp3",
+      audioSrc: "/audio/audio_keyboard_1.mp3",
     },
     {
       category: "keyboard",
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Tiger80",
       switches: "KTT Kang Whites",
       case: "aluminium",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_2.mp3",
+      audioSrc: "/audio/audio_keyboard_2.mp3",
     },
     {
       category: "keyboard",
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Gas67",
       switches: "KTT Kang Whites",
       case: "Smokey (Semi-Translucent) Black",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_3.mp3",
+      audioSrc: "/audio/audio_keyboard_3.mp3",
     },
     {
       category: "keyboard",
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Akko SPR67",
       switches: "KNC Tofu Linears",
       case: "White aluminium",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_4.mp3",
+      audioSrc: "/audio/audio_keyboard_4.mp3",
     },
     {
       category: "keyboard",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT Kang Whites",
       case: "Akko MOD007v2",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_5.mp3",
+      audioSrc: "/audio/audio_keyboard_5.mp3",
     },
     {
       category: "keyboard",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT Kang Whites",
       case: "Akko MOD006",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_6.mp3",
+      audioSrc: "/audio/audio_keyboard_6.mp3",
     },
     {
       category: "keyboard",
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "RK61",
       switches: "--",
       case: "--",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_7.mp3",
+      audioSrc: "/audio/audio_keyboard_7.mp3",
     },
     {
       category: "keyboard",
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT Kang Whites",
       case: "Leaf65",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_8.mp3",
+      audioSrc: "/audio/audio_keyboard_8.mp3",
     },
     {
       category: "keyboard",
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT Roses",
       case: "Next Time 75",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_9.mp3",
+      audioSrc: "/audio/audio_keyboard_9.mp3",
     },
     {
       category: "keyboard",
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT Peaches",
       case: "YMDK Melody 96",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_10.mp3",
+      audioSrc: "/audio/audio_keyboard_10.mp3",
     },
     {
       category: "keyboard",
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "Quartz V2",
       case: "Size.L Green",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_11.mp3",
+      audioSrc: "/audio/audio_keyboard_11.mp3",
     },
     {
       category: "keyboard",
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "KTT HaloHalus",
       case: "Savage65",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_12.mp3",
+      audioSrc: "/audio/audio_keyboard_12.mp3",
     },
     {
       category: "keyboard",
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "--",
       case: "--",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_13.mp3",
+      audioSrc: "/audio/audio_keyboard_13.mp3",
     },
     {
       category: "keyboard",
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "--",
       case: "--",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_14.mp3",
+      audioSrc: "/audio/audio_keyboard_14.mp3",
     },
     {
       category: "keyboard",
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Custom Build",
       switches: "--",
       case: "--",
-      audioSrc: "/Keyed-In-Peace/audio/audio_keyboard_15.mp3",
+      audioSrc: "/audio/audio_keyboard_15.mp3",
     },
     {
       category: "other",
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Rain",
       switches: "Raindrops",
       emoji: "⛈️🌧️🌧️",
-      audioSrc: "/Keyed-In-Peace/audio/audio_Rain.mp3",
+      audioSrc: "/audio/audio_Rain.mp3",
     },
     {
       category: "other",
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Fire",
       switches: "Campfire crackling",
       case: "🔥🔥🔥",
-      audioSrc: "/Keyed-In-Peace/audio/audio_Fire.mp3",
+      audioSrc: "/audio/audio_Fire.mp3",
     },
     {
       category: "other",
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Office",
       switches: "Fun Office",
       case: "🏢🏢🏢",
-      audioSrc: "/Keyed-In-Peace/audio/audio_Office.mp3",
+      audioSrc: "/audio/audio_Office.mp3",
     },
     {
       category: "other",
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "AirPlane",
       switches: "Airplane White Noise",
       case: "✈️✈️✈️",
-      audioSrc: "/Keyed-In-Peace/audio/audio_Airplane.mp3",
+      audioSrc: "/audio/audio_Airplane.mp3",
     },
     {
       category: "other",
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Ocean",
       switches: "Sweet Sound of Waves",
       case: "🌊🌊🌊",
-      audioSrc: "/Keyed-In-Peace/audio/audio_Ocean.mp3",
+      audioSrc: "/audio/audio_Ocean.mp3",
     },
   ];
   const cardsContainer = document.getElementById("cards-container");
