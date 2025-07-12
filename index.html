@@ -1,44 +1,114 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KIP</title>
-    <link rel="icon" type="image-png" href="img/keyboard-icon.png" />
+    <title>KIP - Keyed In Peace</title>
+    <link rel="icon" type="image/png" href="img/keyboard-icon.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:600"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <div class="float-button">
-      <a href="Credits.html">❤️</a>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <canvas id="visualizer"></canvas>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <button id="focus-mode-btn" title="Focus Mode (F)"><i class="fas fa-compress"></i></button>
+        </div>
+        <div class="top-bar-right">
+            <button id="shortcuts-btn" title="Keyboard Shortcuts (?)"><i class="fas fa-keyboard"></i></button>
+            <button id="theme-switcher-btn" title="Switch Theme (T)"><i class="fas fa-moon"></i></button>
+             <a href="Credits.html" class="credits-btn-top" title="Credits" target="_blank">❤️</a>
+        </div>
     </div>
 
     <div class="container">
-      <h1>Keyed In Peace</h1>
+        <header>
+            <h1>Keyed In Peace</h1>
+            <p class="subtitle">Your personal soundscape for focus, relaxation, and inspiration.</p>
+        </header>
 
-      <h3>
-        Take a look at
-        <a href="pomo/index.html" target="_blank">Tomodoro</a> pomodoro web app
-        with cool features like PIP Mode, tasks, statistics and offline support.
-      </h3>
+        <div class="controls-toolbar">
+            <div class="filter-section">
+                <label for="category-select">Filter:</label>
+                <select id="category-select" onchange="filterCards()">
+                    <option value="all">All</option>
+                    <option value="keyboard">Keyboards</option>
+                    <option value="other">Nature & Ambience</option>
+                </select>
+            </div>
+            <div class="sleep-timer-section">
+                <label for="sleep-timer">Sleep Timer (minutes):</label>
+                <input type="number" id="sleep-timer" min="1" placeholder="Off">
+                <button id="set-timer-btn">Set</button>
+            </div>
+            <div class="master-controls">
+                <button id="mute-all-btn" title="Mute All (M)"><i class="fas fa-volume-mute"></i> Mute All</button>
+            </div>
+        </div>
 
-      <div class="DropDown">
-        <label for="category-select">Filter Cards:</label>
-        <select id="category-select" onchange="filterCards()">
-          <option value="all">All</option>
-          <option value="keyboard">Keyboard</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+        <div class="cards-container" id="cards-container"></div>
 
-      <div class="row" id="cards-container"></div>
+        <div class="scenes-section">
+            <h2><i class="fas fa-layer-group"></i> Scenes</h2>
+            <p>One-click ambient soundscapes to get you started.</p>
+            <div class="scenes-list" id="scenes-list"></div>
+        </div>
+
+        <div class="saved-combinations">
+            <h2><i class="fas fa-save"></i> My Saved Mixes</h2>
+            <div class="combinations-list" id="combinations-list"></div>
+            <div class="save-combination-form">
+                <input type="text" id="combination-name" placeholder="Name your new mix...">
+                <button id="save-combination-btn">Save Current Mix</button>
+            </div>
+        </div>
     </div>
-  </body>
+
+    <div class="pomodoro-timer">
+        <div class="pomodoro-header">
+            <span id="pomodoro-mode">Work</span>
+            <button id="pomo-settings-btn" title="Customize Timer"><i class="fas fa-cog"></i></button>
+        </div>
+        <div class="pomodoro-time-display">
+            <span id="pomodoro-time">25:00</span>
+        </div>
+        <div class="pomodoro-settings" id="pomodoro-settings-panel">
+                <div class="setting-item">
+                    <label for="pomo-work-time">Work (mins)</label>
+                    <input type="number" id="pomo-work-time" value="25" min="1">
+                </div>
+                <div class="setting-item">
+                    <label for="pomo-short-break-time">Short Break (mins)</label>
+                    <input type="number" id="pomo-short-break-time" value="5" min="1">
+                </div>
+                <div class="setting-item">
+                    <label for="pomo-long-break-time">Long Break (mins)</label>
+                    <input type="number" id="pomo-long-break-time" value="15" min="1">
+                </div>
+            <button id="pomo-apply-settings-btn">Apply</button>
+        </div>
+        <div class="pomodoro-controls">
+            <button id="pomo-start-pause-btn" title="Start/Pause (P)">Start</button>
+            <button id="pomo-reset-btn" title="Reset">Reset</button>
+        </div>
+    </div>
+
+    <div id="shortcuts-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" title="Close">&times;</button>
+            <h2><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h2>
+            <ul class="shortcuts-list">
+                <li><kbd>M</kbd><span>Mute / Unmute All Sounds</span></li>
+                <li><kbd>P</kbd><span>Start / Pause Pomodoro Timer</span></li>
+                <li><kbd>T</kbd><span>Switch Theme (Light/Dark)</span></li>
+                <li><kbd>F</kbd><span>Toggle Focus Mode</span></li>
+                <li><kbd>Esc</kbd><span>Exit Focus Mode</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
